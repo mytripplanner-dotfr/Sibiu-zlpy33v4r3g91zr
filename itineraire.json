@@ -1,0 +1,319 @@
+{
+  "pays": "Roumanie",
+  "drapeau": "🇷🇴",
+  "symbole": "🏰",
+  "titre": "Détente et Charme Hivernal à Sibiu",
+  "budget_total": "1700 €",
+  "duree": "14 jours",
+  "date_debut": "2026-01-15",
+  "date_fin": "2026-01-29",
+  "temps_vol": "4h30 (depuis Saint Maurice, Italie)",
+  "escale": "1",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée Douce à Sibiu",
+      "legende": "Après votre vol, installez-vous confortablement dans la charmante ville de Sibiu. Profitez d'une première balade légère pour vous imprégner de l'atmosphère médiévale et des lumières hivernales.",
+      "lieu": "Sibiu",
+      "activites": [
+        "<strong>🛬 Arrivée à Sibiu</strong>: Atterrissage à l'aéroport international de Sibiu (SBZ) et transfert vers votre hébergement.",
+        "<strong>🛏️ Installation à l'hôtel</strong>: Prenez le temps de vous installer et de vous rafraîchir après le voyage.",
+        "<strong>🚶‍♂️ Balade dans la Grande Place</strong>: Une promenade relaxante sur la Piața Mare, admirant l'architecture et les premiers aperçus de la ville."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Transport depuis l'aéroport",
+          "texte": "Des taxis ou des bus locaux sont disponibles pour rejoindre le centre-ville de Sibiu en environ 15-20 minutes."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🚶‍♀️",
+      "titre": "Cœur Historique de Sibiu",
+      "legende": "Plongez au cœur de Sibiu en explorant ses places emblématiques et ses passages secrets. Laissez-vous charmer par l'histoire et l'architecture unique de la ville, surnommée \"la ville aux yeux\".",
+      "lieu": "Sibiu",
+      "activites": [
+        "<strong>🏛️ Exploration de la Piața Mare</strong>: Admirez les bâtiments historiques comme le Palais Brukenthal et l'Hôtel de Ville.",
+        "<strong>🌉 Traversée du Pont des Mensonges</strong>: Découvrez la légende de ce pont emblématique reliant la Grande et la Petite Place.",
+        "<strong>☕ Pause détente à la Piața Mică</strong>: Profitez d'un café chaud dans l'un des charmants cafés de la Petite Place."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Les \"yeux\" de Sibiu",
+          "texte": "Observez les toits des maisons de la vieille ville, leurs lucarnes ressemblent à des yeux qui vous observent."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🌳",
+      "titre": "Immersion Culturelle au Musée ASTRA",
+      "legende": "Passez une journée paisible au Musée National ASTRA, l'un des plus grands musées en plein air d'Europe. C'est une invitation à une balade douce à travers les traditions rurales roumaines.",
+      "lieu": "Sibiu",
+      "activites": [
+        "<strong>🚶‍♀️ Visite du Musée ASTRA</strong>: Explorez les maisons traditionnelles, moulins et ateliers artisanaux disséminés dans un cadre naturel.",
+        "<strong>🍽️ Déjeuner traditionnel</strong>: Savourez un repas typique roumain dans l'un des restaurants du musée ou à proximité.",
+        "<strong>🛍️ Artisanat local</strong>: Cherchez des souvenirs faits main dans les petites boutiques du musée."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "🚌",
+          "titre": "Accès au Musée ASTRA",
+          "texte": "Le musée est facilement accessible en bus depuis le centre-ville de Sibiu, offrant un trajet court et pratique."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🧖‍♀️",
+      "titre": "Journée Bien-être et Relaxation",
+      "legende": "Offrez-vous une journée de pure détente. Que ce soit dans un spa moderne ou en explorant les environs pour une marche apaisante, le bien-être est au programme.",
+      "lieu": "Sibiu / Ocna Sibiului",
+      "activites": [
+        "<strong>💆‍♀️ Spa et bien-être</strong>: Profitez des installations d'un spa local à Sibiu ou explorez les bains salés d'Ocna Sibiului (vérifier l'ouverture en hiver).",
+        "<strong>📚 Lecture et repos</strong>: Détendez-vous avec un bon livre dans un café confortable ou à votre hôtel.",
+        "<strong>🍲 Dîner léger</strong>: Terminez la journée par un dîner sain et relaxant."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "⚠️",
+          "titre": "Ocna Sibiului en hiver",
+          "texte": "Les installations extérieures d'Ocna Sibiului peuvent être fermées en hiver. Renseignez-vous à l'avance ou optez pour un spa en ville."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "❄️",
+      "titre": "Évasion Hivernale à Păltiniș",
+      "legende": "Prenez de la hauteur pour une bouffée d'air frais et des paysages enneigés. Păltiniș offre un cadre idéal pour des balades douces et l'admiration de la nature hivernale.",
+      "lieu": "Păltiniș",
+      "activites": [
+        "<strong>🚌 Excursion à Păltiniș</strong>: Montez à la station de montagne pour profiter de l'ambiance hivernale.",
+        "<strong>🚶‍♂️ Balade douce en forêt</strong>: Promenez-vous sur des sentiers faciles, admirant les sapins enneigés et le calme de la montagne.",
+        "<strong>☕ Chocolat chaud au chalet</strong>: Réchauffez-vous avec une boisson chaude dans un chalet de montagne, profitant de la vue."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "🧤",
+          "titre": "Équipement",
+          "texte": "Prévoyez des vêtements chauds, des gants et des chaussures imperméables pour profiter pleinement de la neige."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "⛪",
+      "titre": "Trésors Architecturaux de Sibiu",
+      "legende": "Découvrez la richesse architecturale et spirituelle de Sibiu en visitant ses églises historiques et en montant à la Tour du Conseil pour une vue panoramique sur la ville.",
+      "lieu": "Sibiu",
+      "activites": [
+        "<strong>⛪ Visite de la Cathédrale Évangélique</strong>: Admirez son architecture gothique et son intérieur impressionnant.",
+        "<strong>🗼 Montée à la Tour du Conseil</strong>: Profitez d'une vue imprenable sur les toits de Sibiu et les Carpates environnantes (vérifier l'ouverture en hiver).",
+        "<strong>🚶‍♀️ Flânerie dans les rues de la Ville Basse</strong>: Explorez les ruelles pavées et les maisons colorées de la partie basse de la ville."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🕰️",
+          "titre": "Horaires d'ouverture",
+          "texte": "Les horaires des sites peuvent varier en hiver. Il est conseillé de vérifier avant votre visite."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🖼️",
+      "titre": "Art et Histoire au Palais Brukenthal",
+      "legende": "Passez une matinée enrichissante au Musée National Brukenthal, l'un des plus anciens musées de Roumanie. L'après-midi sera dédiée à une exploration plus libre et à la détente.",
+      "lieu": "Sibiu",
+      "activites": [
+        "<strong>🎨 Visite du Musée National Brukenthal</strong>: Admirez les collections d'art européen et roumain dans ce magnifique palais baroque.",
+        "<strong>🚶‍♀️ Balade libre et shopping</strong>: Profitez de l'après-midi pour explorer les boutiques d'artisanat ou revisiter un quartier coup de cœur.",
+        "<strong>🍽️ Dégustation de vin local</strong>: Terminez la journée par une dégustation de vins roumains dans un bar à vin cosy."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "🍷",
+          "titre": "Vins de Transylvanie",
+          "texte": "La Roumanie possède une longue tradition viticole. N'hésitez pas à goûter les cépages locaux."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🏘️",
+      "titre": "Villages Saxons Fortifiés",
+      "legende": "Partez à la découverte des charmants villages saxons de Cisnădie et Cisnădioara, célèbres pour leurs églises fortifiées. Une journée paisible pour apprécier l'histoire rurale de la Transylvanie.",
+      "lieu": "Cisnădie / Cisnădioara",
+      "activites": [
+        "<strong>🚌 Excursion à Cisnădie</strong>: Visitez l'église fortifiée de Cisnădie, l'une des plus anciennes de Transylvanie.",
+        "<strong>🚶‍♀️ Promenade à Cisnădioara</strong>: Montez doucement vers l'église fortifiée perchée sur une colline, offrant une vue magnifique sur la vallée.",
+        "<strong>🍽️ Déjeuner dans un restaurant local</strong>: Savourez une cuisine authentique dans l'un des petits restaurants des villages."
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "🚗",
+          "titre": "Transport",
+          "texte": "Ces villages sont facilement accessibles en bus local ou en taxi depuis Sibiu, pour une excursion d'une demi-journée ou une journée complète."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🏞️",
+      "titre": "Nature et Quartiers Cachés",
+      "legende": "Profitez d'une matinée tranquille pour une balade le long de la rivière Cibin, puis explorez les quartiers moins connus de Sibiu, offrant une perspective différente sur la ville.",
+      "lieu": "Sibiu",
+      "activites": [
+        "<strong>🚶‍♀️ Balade le long de la rivière Cibin</strong>: Une promenade apaisante pour profiter de la nature en ville.",
+        "<strong>🏘️ Exploration du quartier des Tanners</strong>: Découvrez l'ancien quartier des tanneurs, avec ses maisons pittoresques et son ambiance authentique.",
+        "<strong>🖼️ Visite d'une galerie d'art locale</strong>: Découvrez le travail d'artistes contemporains roumains dans une petite galerie."
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "📸",
+          "titre": "Photographie",
+          "texte": "Le quartier des Tanners offre de nombreuses opportunités de photos avec ses ruelles étroites et ses bâtiments colorés."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "👑",
+      "titre": "La Citadelle d'Alba Iulia",
+      "legende": "Partez pour une excursion d'une journée à Alba Iulia, une ville chargée d'histoire avec sa magnifique citadelle en forme d'étoile. Une balade majestueuse à travers les siècles.",
+      "lieu": "Alba Iulia",
+      "activites": [
+        "<strong>🚌 Excursion à Alba Iulia</strong>: Voyage en bus ou en train vers cette ville historique.",
+        "<strong>🏰 Visite de la Citadelle d'Alba Carolina</strong>: Explorez les portes monumentales, les cathédrales et les musées à l'intérieur de la citadelle.",
+        "<strong>🚶‍♂️ Promenade sur les remparts</strong>: Profitez d'une marche relaxante sur les remparts pour admirer la grandeur de la citadelle."
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Histoire",
+          "texte": "Alba Iulia est un site clé de l'histoire roumaine, notamment pour l'unification de la Roumanie."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": "🍲",
+      "titre": "Saveurs de Transylvanie",
+      "legende": "Plongez dans la gastronomie locale avec une expérience culinaire. Apprenez à préparer des plats traditionnels ou participez à une dégustation pour éveiller vos papilles.",
+      "lieu": "Sibiu",
+      "activites": [
+        "<strong>👩‍🍳 Atelier de cuisine roumaine</strong>: Participez à un cours pour apprendre à préparer des spécialités comme la ciorbă ou les sarmale.",
+        "<strong>🧀 Dégustation de produits locaux</strong>: Visitez un marché ou une boutique spécialisée pour goûter fromages, charcuteries et confitures.",
+        "<strong>🍷 Dîner gastronomique</strong>: Terminez la journée par un dîner raffiné mettant en valeur les produits de la région."
+      ],
+      "illustration": "jour11.jpg",
+      "encarts": [
+        {
+          "symbole": "🌶️",
+          "titre": "Cuisine roumaine",
+          "texte": "La cuisine roumaine est riche et savoureuse, influencée par les traditions balkaniques, turques et hongroises."
+        }
+      ]
+    },
+    {
+      "jour": 12,
+      "symbole": "🛍️",
+      "titre": "Shopping et Douceur de Vivre",
+      "legende": "Une journée plus libre pour flâner, faire du shopping ou revisiter vos endroits préférés. Profitez de l'ambiance décontractée de Sibiu et de ses trésors cachés.",
+      "lieu": "Sibiu",
+      "activites": [
+        "<strong>🛍️ Shopping de souvenirs</strong>: Cherchez des cadeaux uniques dans les boutiques d'artisanat de la vieille ville.",
+        "<strong>🚶‍♀️ Re-découverte d'un quartier</strong>: Prenez le temps de vous perdre à nouveau dans les ruelles que vous avez aimées.",
+        "<strong>🎭 Spectacle ou concert (optionnel)</strong>: Si disponible, assistez à une représentation culturelle en soirée."
+      ],
+      "illustration": "jour12.jpg",
+      "encarts": [
+        {
+          "symbole": "🎁",
+          "titre": "Idées de souvenirs",
+          "texte": "Pensez à l'artisanat en bois, aux broderies traditionnelles, à la céramique ou aux produits à base de miel."
+        }
+      ]
+    },
+    {
+      "jour": 13,
+      "symbole": "✨",
+      "titre": "Derniers Instants à Sibiu",
+      "legende": "Profitez de cette dernière journée complète pour savourer l'atmosphère de Sibiu. Un dernier repas traditionnel, une dernière balade, pour emporter avec vous les meilleurs souvenirs.",
+      "lieu": "Sibiu",
+      "activites": [
+        "<strong>⛪ Visite de la Cathédrale Orthodoxe</strong>: Admirez l'architecture byzantine et les fresques intérieures de ce lieu de culte impressionnant.",
+        "<strong>🍽️ Dîner d'adieu</strong>: Savourez un dernier repas dans un restaurant traditionnel, dégustant vos plats roumains préférés.",
+        "<strong>🚶‍♀️ Balade nocturne</strong>: Profitez des lumières de la ville pour une dernière promenade romantique dans la vieille ville."
+      ],
+      "illustration": "jour13.jpg",
+      "encarts": [
+        {
+          "symbole": "📸",
+          "titre": "Souvenirs",
+          "texte": "N'oubliez pas de prendre quelques dernières photos pour immortaliser votre voyage à Sibiu."
+        }
+      ]
+    },
+    {
+      "jour": 14,
+      "symbole": "🛫",
+      "titre": "Départ de Sibiu",
+      "legende": "C'est le moment de dire au revoir à la charmante Sibiu. Profitez d'un dernier petit-déjeuner avant de prendre la route vers l'aéroport pour votre vol retour.",
+      "lieu": "Sibiu",
+      "activites": [
+        "<strong>🥐 Petit-déjeuner local</strong>: Savourez un dernier petit-déjeuner roumain.",
+        "<strong>🛬 Transfert à l'aéroport</strong>: Départ de votre hébergement vers l'aéroport de Sibiu (SBZ).",
+        "<strong>✈️ Vol retour</strong>: Envol vers votre destination, la tête pleine de souvenirs."
+      ],
+      "illustration": "jour14.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Heure de départ",
+          "texte": "Prévoyez suffisamment de temps pour le transfert et les formalités à l'aéroport, surtout en période hivernale."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    { "titre": "Budget vol:", "legende": "191 €/pers (A/R)", "symbole": "🛬" },
+    { "titre": "Budget transports:", "legende": "Environ 150 €/pers (local et excursions)", "symbole": "🚆" },
+    { "titre": "Budget repas:", "legende": "Environ 490 €/pers (35 €/jour)", "symbole": "🥗" },
+    { "titre": "Budget logement:", "legende": "Environ 780 €/pers (60 €/nuit pour 13 nuits)", "symbole": "🛏️" },
+    { "titre": "Budget activités:", "legende": "Environ 100 €/pers (musées, spa, etc.)", "symbole": "🎭" }
+  ],
+  "periodes_ideales": [
+    { "titre": "Janvier: Froid et potentiellement neigeux, ambiance hivernale charmante.", "symbole": "❄️" },
+    { "titre": "Printemps (Avril-Mai): Températures douces, nature en éveil.", "symbole": "🌸" },
+    { "titre": "Automne (Septembre-Octobre): Couleurs magnifiques, températures agréables.", "symbole": "🍂" }
+  ],
+  "infos_pratiques": [
+    { "titre": "En janvier, les températures à Sibiu varient entre -5°C et 5°C. Prévoir des vêtements très chauds, des couches, un bonnet, des gants et des chaussures imperméables.", "symbole": "🧣" },
+    { "titre": "La monnaie est le Leu Roumain (RON). Les cartes de crédit sont largement acceptées, mais ayez un peu de liquide pour les petits commerces ou marchés.", "symbole": "💳" },
+    { "titre": "Le permis de conduire français est suffisant pour la location de voiture. La conduite est à droite, et les panneaux sont en km/h. Les routes peuvent être enneigées en janvier.", "symbole": "🚗" },
+    { "titre": "Achetez une carte SIM locale (Orange, Vodafone) ou utilisez une eSIM pour rester connecté. Le Wi-Fi est généralement disponible dans les hébergements et de nombreux cafés.", "symbole": "📶" },
+    { "titre": "La langue officielle est le roumain. L'anglais est parlé dans les zones touristiques et par les jeunes. Quelques mots de roumain seront appréciés.", "symbole": "🗣️" }
+  ],
+  "liens_utiles": [
+    { "legende": "Vols", "titre": "Réserve ton vol", "url": "https://www.kayak.fr/flights/TRN-SBZ/2026-01-15/2026-01-29", "symbole": "🛬" },
+    { "legende": "Infos officielles et inspirations", "titre": "Tourisme Roumanie", "url": "https://romaniatourism.com/", "symbole": "📘" },
+    { "legende": "Transports en Roumanie", "titre": "CFR Călători (trains)", "url": "https://www.cfrcalatori.ro/en/", "symbole": "🚆" },
+    { "legende": "Météo Sibiu", "titre": "Météo Sibiu", "url": "https://www.accuweather.com/fr/ro/sibiu/287756/weather-forecast/287756", "symbole": "🌤️" }
+  ]
+}
