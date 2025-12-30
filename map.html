@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Voyage - Sibiu</title>
+  <style>
+    :root { --primary: #1a73e8; --bg-sidebar: #ffffff; }
+    body { margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; display: flex; height: 100vh; height: 100dvh; overflow: hidden; color: #333; }
+    
+    #sidebar { width: 400px; background: var(--bg-sidebar); height: 100%; display: flex; flex-direction: column; box-shadow: 4px 0 15px rgba(0,0,0,0.08); z-index: 10; transition: 0.3s ease; }
+    #map { flex: 1; height: 100%; position: relative; }
+
+    /* Header minimaliste : Uniquement les jours */
+    .sidebar-header { 
+        padding: 10px 15px; 
+        border-bottom: 1px solid #eee; 
+        background: #fff; 
+        flex-shrink: 0; 
+    }
+
+    .filter-group { 
+        display: flex; 
+        overflow-x: auto; 
+        white-space: nowrap; 
+        gap: 8px; 
+        padding: 5px 0 10px 0;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+    .filter-group::-webkit-scrollbar { display: none; }
+
+    .filter-btn { 
+        padding: 8px 16px; 
+        border: 1px solid #dfe1e5; 
+        border-radius: 20px; 
+        background: white; 
+        cursor: pointer; 
+        font-size: 13px; 
+        font-weight: 600;
+        flex-shrink: 0;
+    }
+    .filter-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+
+    /* Zone de contenu */
+    #poi-content { flex-grow: 1; overflow-y: auto; position: relative; }
+    .poi-detail { display: flex; flex-direction: column; min-height: 100%; }
+
+    .close-details { 
+        position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.6); 
+        color: white; border: none; width: 36px; height: 36px; border-radius: 50%; 
+        cursor: pointer; z-index: 20; font-size: 20px; display: flex; align-items: center; justify-content: center;
+    }
+    
+    .poi-image { width: 100%; height: 250px; object-fit: cover; flex-shrink: 0; }
+    .poi-body { padding: 20px; flex-grow: 1; }
+    .poi-body h2 { margin: 0 0 10px 0; font-size: 22px; padding-right: 40px; }
+    
+    .badge-container { margin-bottom: 12px; }
+    .badge { display: inline-block; background: #f1f3f4; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; text-transform: uppercase; margin-right: 5px; }
+    .badge-day { background: #e8f0fe; color: var(--primary); }
+    .poi-description { font-size: 15px; line-height: 1.6; color: #444; margin-bottom: 20px; }
+    
+    /* Boutons fixés */
+    .btn-group { 
+        display: flex; 
+        gap: 10px; 
+        padding: 15px 20px; 
+        background: #fff; 
+        border-top: 1px solid #f0f0f0; 
+        position: sticky; 
+        bottom: 0; 
+        flex-shrink: 0; 
+    }
+    .btn { flex: 1; text-align: center; padding: 14px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 14px; }
+    .btn-main { background: var(--primary); color: white; }
+    .btn-outline { border: 1px solid #dadce0; color: #1a73e8; }
+
+    .placeholder { padding: 40px 20px; text-align: center; color: #70757a; font-size: 14px; }
+
+    @media (max-width: 768px) {
+      body { flex-direction: column-reverse; }
+      #sidebar { width: 100%; height: auto; min-height: 70px; max-height: 60%; }
+      #sidebar.expanded { height: 60%; }
+      #map { height: auto; flex-grow: 1; }
+      .placeholder { display: none; }
+      .poi-image { height: 180px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="sidebar">
+    <div class="sidebar-header">
+      <div class="filter-group" id="day-filters">
+        <button class="filter-btn active" onclick="filterByDay('all', this)">Toutes</button>
+      </div>
+    </div>
+    <div id="poi-content">
+      <div class="placeholder">Sélectionnez une journée pour explorer les étapes.</div>
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+  <script>
+    let map, markerCluster;
+    let markersArray = [];
+    const locations = [{"lat":45.80347889999999,"lng":24.1449997,"name":"Sibiu","jour":1,"titre":"Arrivée Douce à Sibiu","type":"activité","markerColor":"blue","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=45.80347889999999,24.1449997&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=45.80347889999999,24.1449997"},{"lat":45.8776152,"lng":24.064575,"name":"Sibiu / Ocna Sibiului","jour":4,"titre":"Journée Bien-être et Relaxation","type":"activité","markerColor":"blue","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=45.8776152,24.064575&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=45.8776152,24.064575"},{"lat":45.6550977,"lng":23.9300174,"name":"Păltiniș","jour":5,"titre":"Évasion Hivernale à Păltiniș","type":"activité","markerColor":"blue","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=45.6550977,23.9300174&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=45.6550977,23.9300174"},{"lat":45.7079343,"lng":24.1085598,"name":"Cisnădie / Cisnădioara","jour":8,"titre":"Villages Saxons Fortifiés","type":"activité","markerColor":"blue","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=45.7079343,24.1085598&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=45.7079343,24.1085598"},{"lat":46.07327249999999,"lng":23.5804886,"name":"Alba Iulia","jour":10,"titre":"La Citadelle d'Alba Iulia","type":"activité","markerColor":"blue","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=46.07327249999999,23.5804886&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=46.07327249999999,23.5804886"}];
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: { lat: 45.82347972, lng: 23.9657281 },
+        zoomControl: true,
+        streetViewControl: false,
+        mapTypeControl: false,
+        fullscreenControl: false,
+        styles: [{ featureType: "poi", elementType: "labels", stylers: [{ visibility: "off" }] }]
+      });
+
+      const days = [...new Set(locations.map(l => l.jour))].sort((a,b) => a - b);
+      const filterContainer = document.getElementById('day-filters');
+      days.forEach(day => {
+        const btn = document.createElement('button');
+        btn.className = 'filter-btn';
+        btn.innerText = 'Jour ' + day;
+        btn.onclick = function() { filterByDay(day, this); };
+        filterContainer.appendChild(btn);
+      });
+
+      locations.forEach(loc => {
+        const marker = new google.maps.Marker({
+          position: { lat: loc.lat, lng: loc.lng },
+          icon: `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=$${loc.markerColor}-dot.png`,
+          label: { text: String(loc.jour), color: 'white', fontSize: '11px', fontWeight: 'bold' },
+          data: loc
+        });
+        marker.addListener('click', () => updateSidebar(loc));
+        markersArray.push(marker);
+      });
+
+      markerCluster = new markerClusterer.MarkerClusterer({ map, markers: markersArray });
+    }
+
+    function updateSidebar(poi) {
+      const container = document.getElementById('poi-content');
+      document.getElementById('sidebar').classList.add('expanded');
+      
+      container.innerHTML = `
+        <div class="poi-detail">
+          <button class="close-details" onclick="closeSidebar()" title="Fermer">✕</button>
+          <img src="${poi.streetViewUrl}" class="poi-image">
+          <div class="poi-body">
+            <div class="badge-container">
+              <span class="badge badge-day">Jour ${poi.jour}</span>
+              <span class="badge">${poi.type}</span>
+            </div>
+            <h2>${poi.name}</h2>
+            <p class="poi-description">${poi.titre}</p>
+          </div>
+          <div class="btn-group">
+            <a href="http://googleusercontent.com/maps.google.com/dir/?api=1&destination=${poi.lat},${poi.lng}" target="_blank" class="btn btn-main">Itinéraire</a>
+            <a href="${poi.streetViewLinkUrl}" target="_blank" class="btn btn-outline">Street View</a>
+          </div>
+        </div>
+      `;
+      container.scrollTop = 0;
+      map.panTo({ lat: poi.lat, lng: poi.lng });
+    }
+
+    function closeSidebar() {
+      document.getElementById('poi-content').innerHTML = '<div class="placeholder">Choisissez un jour pour commencer.</div>';
+      document.getElementById('sidebar').classList.remove('expanded');
+    }
+
+    function filterByDay(day, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filtered = day === 'all' ? markersArray : markersArray.filter(m => m.data.jour === day);
+      markerCluster.clearMarkers();
+      markerCluster.addMarkers(filtered);
+
+      if (filtered.length > 0) {
+        const bounds = new google.maps.LatLngBounds();
+        filtered.forEach(m => bounds.extend(m.getPosition()));
+        map.fitBounds(bounds);
+        
+        google.maps.event.addListenerOnce(map, 'idle', function() {
+            if (day !== 'all') {
+                if (filtered.length === 1) map.setZoom(16);
+                else if (map.getZoom() > 15) map.setZoom(15);
+                updateSidebar(filtered[0].data);
+            } else {
+                closeSidebar();
+            }
+        });
+      }
+      btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI&callback=initMap"></script>
+</body>
+</html>
